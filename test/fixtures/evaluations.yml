@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student: one
+  professor: one
+  class: one
+  year: 1
+  semester: 1
+  grade: MyString
+  comment: MyText
+  professor_reply: MyText
+  anonymous: false
+  professor_reply_at: 2018-02-03 00:39:37
+
+two:
+  student: two
+  professor: two
+  class: two
+  year: 1
+  semester: 1
+  grade: MyString
+  comment: MyText
+  professor_reply: MyText
+  anonymous: false
+  professor_reply_at: 2018-02-03 00:39:37

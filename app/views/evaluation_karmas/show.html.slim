@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Student:
+  = @evaluation_karma.student
+p
+  strong Evaluation:
+  = @evaluation_karma.evaluation
+p
+  strong Value:
+  = @evaluation_karma.value
+
+=> link_to 'Edit', edit_evaluation_karma_path(@evaluation_karma)
+'|
+=< link_to 'Back', evaluation_karmas_path

@@ -1,0 +1,36 @@
+p#notice = notice
+
+p
+  strong Student:
+  = @evaluation.student
+p
+  strong Professor:
+  = @evaluation.professor
+p
+  strong Class:
+  = @evaluation.class
+p
+  strong Year:
+  = @evaluation.year
+p
+  strong Semester:
+  = @evaluation.semester
+p
+  strong Grade:
+  = @evaluation.grade
+p
+  strong Comment:
+  = @evaluation.comment
+p
+  strong Professor reply:
+  = @evaluation.professor_reply
+p
+  strong Anonymous:
+  = @evaluation.anonymous
+p
+  strong Professor reply at:
+  = @evaluation.professor_reply_at
+
+=> link_to 'Edit', edit_evaluation_path(@evaluation)
+'|
+=< link_to 'Back', evaluations_path

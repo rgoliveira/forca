@@ -1,0 +1,25 @@
+h1 Listing evaluation_karmas
+
+table
+  thead
+    tr
+      th Student
+      th Evaluation
+      th Value
+      th
+      th
+      th
+
+  tbody
+    - @evaluation_karmas.each do |evaluation_karma|
+      tr
+        td = evaluation_karma.student
+        td = evaluation_karma.evaluation
+        td = evaluation_karma.value
+        td = link_to 'Show', evaluation_karma
+        td = link_to 'Edit', edit_evaluation_karma_path(evaluation_karma)
+        td = link_to 'Destroy', evaluation_karma, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Evaluation karma', new_evaluation_karma_path

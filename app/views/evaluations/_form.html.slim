@@ -1,0 +1,39 @@
+= form_for @evaluation do |f|
+  - if @evaluation.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@evaluation.errors.count, "error")} prohibited this evaluation from being saved:"
+      ul
+        - @evaluation.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :student
+    = f.text_field :student
+  .field
+    = f.label :professor
+    = f.text_field :professor
+  .field
+    = f.label :course
+    = f.text_field :course
+  .field
+    = f.label :year
+    = f.number_field :year
+  .field
+    = f.label :semester
+    = f.number_field :semester
+  .field
+    = f.label :grade
+    = f.text_field :grade
+  .field
+    = f.label :comment
+    = f.text_area :comment
+  .field
+    = f.label :professor_reply
+    = f.text_area :professor_reply
+  .field
+    = f.label :anonymous
+    = f.check_box :anonymous
+  .field
+    = f.label :professor_reply_at
+    = f.datetime_select :professor_reply_at
+  .actions = f.submit

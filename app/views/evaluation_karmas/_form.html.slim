@@ -1,0 +1,18 @@
+= form_for @evaluation_karma do |f|
+  - if @evaluation_karma.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@evaluation_karma.errors.count, "error")} prohibited this evaluation_karma from being saved:"
+      ul
+        - @evaluation_karma.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :student
+    = f.text_field :student
+  .field
+    = f.label :evaluation
+    = f.text_field :evaluation
+  .field
+    = f.label :value
+    = f.number_field :value
+  .actions = f.submit
